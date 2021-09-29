@@ -15,31 +15,17 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Clock implements SoManyClocks {
-    private int hour, min;
-    private final float price;
-    private final String brand;
+public class Clock extends BasedClock implements SoManyClocks {
+    private int hour = 0, min = 0;
     private final Scanner in = new Scanner(System.in);
 
     public Clock(float _price, String _brand) {
-        hour = 0;
-        min = 0;
-        price = _price;
-        brand = _brand;
-    }
-
-    //@Override
-    public float GetPrice() {
-        return price;
-    }
-
-    public String GetBrand() {
-        return brand;
+        super(_price, _brand);
     }
 
     public void SetTime() throws MyExceptions {
         int _hour, _min;
-        System.out.print("Начальное время:");
+        System.out.print("Начальное время (h, m): ");
         _hour = in.nextInt();
         _min = in.nextInt();
         if (_hour < 0 || _hour > 23)

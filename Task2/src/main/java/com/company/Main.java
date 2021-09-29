@@ -23,12 +23,16 @@ public class Main {
 
         try {
             clock1.SetTime();
-        } catch (MyExceptions ex)  { System.out.println(ex.getMessage()); }
+        } catch (MyExceptions ex) {
+            System.out.println(ex.getMessage());
+        }
         System.out.println(clock1);
 
         try {
             clock1.ChangeTime();
-        } catch (MyExceptions ex) { System.out.println(ex.getMessage()); }
+        } catch (MyExceptions ex) {
+            System.out.println(ex.getMessage());
+        }
         System.out.println(clock1);
 
         SoManyClocks clock2 = new Clock2(200.34f, "часы сына маминой подруги");
@@ -39,12 +43,16 @@ public class Main {
 
        try {
             clock2.SetTime();
-        } catch (MyExceptions ex) { System.out.println(ex.getMessage()); }
+        } catch (MyExceptions ex) {
+           System.out.println(ex.getMessage());
+       }
         System.out.println(clock2);
 
         try {
             clock2.ChangeTime();
-        } catch (MyExceptions ex) { System.out.println(ex.getMessage()); }
+        } catch (MyExceptions ex) {
+            System.out.println(ex.getMessage());
+        }
         System.out.println(clock2);
     }
 }
