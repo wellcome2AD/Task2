@@ -13,9 +13,9 @@
 package com.company;
 
 public class Clock {
-    int hour, min;
-    float price;
-    String brand;
+    private int hour, min;
+    private float price;
+    private String brand;
     public Clock(float _price, String _brand) {
         hour = 0;
         min = 0;
@@ -47,12 +47,4 @@ public class Clock {
     {
         return "время " + Integer.toString(hour) + "h:" + Integer.toString(min) + "m";
     }
-/*
-    public int GetHour(){
-        return hour;
-    }
-    public int GetMin(){
-        return min;
-    }
-*/
 }
