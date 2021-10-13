@@ -1,8 +1,8 @@
 package com.company;
 
 public class BasedClock {
-    private final float price;
-    private final String brand;
+    private float price;
+    private String brand;
     BasedClock(float _price, String _brand) {
         price = _price;
         brand = _brand;

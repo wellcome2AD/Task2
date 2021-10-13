@@ -11,34 +11,36 @@ public class Clock2 extends BasedClock implements SoManyClocks {
     }
 
     public void SetTime() throws MyExceptions {
-        int _hour, _min, _sec;
         System.out.print("Начальное время (h, m, s): ");
-        _hour = in.nextInt();
-        _min = in.nextInt();
-        _sec = in.nextInt();
+        int _hour = in.nextInt();
+        int _min = in.nextInt();
+        int _sec = in.nextInt();
+
         if (_hour < 0 || _hour > 23)
-            throw new MyExceptions("Wrong hours!");
+            throw new MyExceptions("Wrong hours!", _hour);
         else if (_min < 0 || _min > 59)
-            throw new MyExceptions("Wrong minutes!");
+            throw new MyExceptions("Wrong minutes!", _min);
         else if (_sec < 0 || _sec > 59)
-            throw new MyExceptions("Wrong seconds!");
+            throw new MyExceptions("Wrong seconds!", _sec);
+
         hour = _hour;
         min = _min;
         sec = _sec;
     }
 
     public void ChangeTime() throws MyExceptions {
-        int _hour, _min, _sec;
         System.out.print("Перевод времени на ");
-        _hour = in.nextInt();
-        _min = in.nextInt();
-        _sec = in.nextInt();
+        int _hour = in.nextInt();
+        int _min = in.nextInt();
+        int _sec = in.nextInt();
+
         if (_hour < 0)
-            throw new MyExceptions("Wrong hours!");
+            throw new MyExceptions("Wrong hours!", _hour);
         else if (_min < 0)
-            throw new MyExceptions("Wrong minutes!");
+            throw new MyExceptions("Wrong minutes!", _min);
         else if (_sec < 0)
-            throw new MyExceptions("Wrong seconds!");
+            throw new MyExceptions("Wrong seconds!", _sec);
+
         sec += _sec;
         min += _min + sec / 60;
         sec %= 60;
