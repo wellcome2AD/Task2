@@ -16,8 +16,8 @@ public class Main {
     public static void main(String[] args) {
         ClockFactory clockFactory = new ClockFactory();
 
-        SoManyClocks clock1 = clockFactory.createClock(1);
-        SoManyClocks clock2 = clockFactory.createClock(2);
+        SoManyClocks clock1 = clockFactory.createClock(TypeOfClock.ClockWithSecondArrow);
+        SoManyClocks clock2 = clockFactory.createClock(TypeOfClock.ClockWithMinuteArrow);
 
         System.out.println("марка " + clock1.GetBrand() + "    цена " + clock1.GetPrice());
 
@@ -35,7 +35,7 @@ public class Main {
         }
         System.out.println(clock1);
 
-        System.out.println("марка " + clock2.GetBrand() + "    цена " + clock2.GetPrice());
+        System.out.println("\nмарка " + clock2.GetBrand() + "    цена " + clock2.GetPrice());
 
        try {
             clock2.SetTime();

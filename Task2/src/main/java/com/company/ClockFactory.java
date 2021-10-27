@@ -1,13 +1,13 @@
 package com.company;
 
 public class ClockFactory {
-    public SoManyClocks createClock(int type){
+    public SoManyClocks createClock(TypeOfClock type){
         SoManyClocks clock = null;
         switch (type) {
-            case 1:
+            case ClockWithSecondArrow:
                 clock = new Clock(100.10f, "часы надёжнее швейцарских");
                 break;
-            case 2:
+            case ClockWithMinuteArrow:
                 clock = new Clock2(200.34f, "часы сына маминой подруги");
                 break;
         }

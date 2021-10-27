@@ -29,9 +29,9 @@ public class Clock extends BasedClock implements SoManyClocks {
         _hour = in.nextInt();
         _min = in.nextInt();
         if (_hour < 0 || _hour > 23)
-            throw new MyExceptions("Wrong hours!", _hour);
+            throw new MyExceptions("Wrong hours! ", _hour);
         else if (_min < 0 || _min > 59)
-            throw new MyExceptions("Wrong minutes!", _min);
+            throw new MyExceptions("Wrong minutes! ", _min);
         hour = _hour;
         min = _min;
     }
@@ -41,9 +41,9 @@ public class Clock extends BasedClock implements SoManyClocks {
         _hour = in.nextInt();
         _min = in.nextInt();
         if (_hour < 0)
-            throw new MyExceptions("Wrong hours!", _hour);
+            throw new MyExceptions("Wrong hours! ", _hour);
         else if (_min < 0)
-            throw new MyExceptions("Wrong minutes!", _min);
+            throw new MyExceptions("Wrong minutes! ", _min);
         min += _min;
         hour = (hour + _hour + min / 60) % 24 ;
         min %= 60;
